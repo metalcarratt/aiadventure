@@ -1,12 +1,17 @@
 <template>
-  <GameContainer />
+  <GameContainer v-if="storyInPlay()"/>
+  <StoryChooser v-else />
 </template>
 
 <script setup>
 import GameContainer from './components/GameContainer.vue';
-import { init } from './engine/init';
+import StoryChooser from './StoryChooser.vue';
+// import { init } from './engine/init';
+import { story } from './engine/story';
 
-init();
+// init();
+
+const storyInPlay = () => story.isInitialised();
 
 </script>
 

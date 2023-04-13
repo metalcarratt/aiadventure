@@ -22,6 +22,7 @@ export const story = {
         storyReference.value = newRef;
         story.update(storyReference.value[0]);
     },
+    isInitialised: () => storyReference.value.length,
 
     scene: (index: number) => store.value[index],
     size: () => store.value.length,

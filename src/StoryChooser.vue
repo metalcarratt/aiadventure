@@ -26,7 +26,7 @@ const chooseStrandedLoveIsland = () => {
 const cover = './cover.jpg';
 const workplaceRomanceImg = './workplace/cover.jpg';
 const strandedLoveIslandImg = './island/cover.jpg';
-const aboutLocation = './about';
+const aboutLocation = './about/index.html';
 </script>
 
 <style scoped>

@@ -6,6 +6,7 @@
             <img @click="chooseWorkplaceRomance" :src="workplaceRomanceImg" class="book" />
             <img @click="chooseStrandedLoveIsland" :src="strandedLoveIslandImg" class="book" />
         </div>
+        <a :href="aboutLocation">About</a>
     </div>
 </template>
 
@@ -25,6 +26,7 @@ const chooseStrandedLoveIsland = () => {
 const cover = './cover.jpg';
 const workplaceRomanceImg = './workplace/cover.jpg';
 const strandedLoveIslandImg = './island/cover.jpg';
+const aboutLocation = './about';
 </script>
 
 <style scoped>
@@ -36,6 +38,10 @@ const strandedLoveIslandImg = './island/cover.jpg';
 
 .chooser img {
     width: 100%;
+}
+
+.chooser a {
+    font-family: sans-serif;
 }
 
 .chooser h1 {
@@ -56,20 +62,6 @@ const strandedLoveIslandImg = './island/cover.jpg';
     justify-content: space-around;
     align-items: center;
 }
-
-/*.stories span {
-    font-family: "Comic Sans MS";
-    border: 1px solid black;
-    padding: 20px;
-    margin: 5px;
-    background-color: #37a4c6;
-    color: white;
-}
-
-.stories span:hover {
-    background-color: #256d83;
-    cursor: pointer;
-} */
 
 img.book {
     width: 125px;

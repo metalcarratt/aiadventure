@@ -2,14 +2,15 @@ export interface Choice {
     say: string,
     next: {
         attr?: Record<string, number>,
-        show?: CutScene
+        show?: CutScene,
+        sequence?: CutScene[]
     }
 }
 
 export interface Ending {
     max: Record<string, number>,
     min: Record<string, number>,
-    show: CutScene
+    show: CutScene,
 }
 
 export interface Scene extends CutScene {

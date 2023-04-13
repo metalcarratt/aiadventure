@@ -4,6 +4,7 @@
         <h1>Choose a story:</h1>
         <div class="stories">
             <span @click="chooseWorkplaceRomance">Workplace Romance</span>
+            <span @click="chooseStrandedLoveIsland">Stranded Love Island</span>
         </div>
     </div>
 </template>
@@ -11,9 +12,14 @@
 <script setup>
 import { init } from './engine/init';
 import { myStory, initAttributes } from './stories/workplace-romance/index';
+import { loveIsland, loveIslandAttributes } from './stories/stranded-love-island/index';
 
 const chooseWorkplaceRomance = () => {
     init(myStory, initAttributes);
+}
+
+const chooseStrandedLoveIsland = () => {
+    init(loveIsland, loveIslandAttributes);
 }
 
 const cover = './cover.jpg';
@@ -43,6 +49,8 @@ const cover = './cover.jpg';
 .stories {
     position: absolute;
     bottom: 40px;
+    width: 100%;
+    display: flex;
 }
 .stories span {
     font-family: "Comic Sans MS";

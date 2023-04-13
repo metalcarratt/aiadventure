@@ -1,8 +1,8 @@
 <template>
-    <div class="choices" v-if="store.hasChoices()">
+    <div class="choices" v-if="chs.hasChoices()">
         <span
             class="choice"
-            v-for="choice, choiceIndex in store.choices()"
+            v-for="choice, choiceIndex in chs.choices()"
             :key="choiceIndex"
             @click.stop="clickChoice(choice)"
         >
@@ -12,8 +12,7 @@
 </template>
 
 <script setup>
-import { store } from '../engine/store';
-import { clickChoice } from '../engine/click';
+import { chs, clickChoice } from '../engine/choices';
 </script>
 
 <style scoped>

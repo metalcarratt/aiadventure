@@ -1,4 +1,5 @@
 import { attr } from './attributes';
+import { chs } from './choices';
 import { store } from './store';
 import { story } from './story';
 import { Ending, Scene } from './storyi';
@@ -33,8 +34,8 @@ export const doUpdate = (show: Scene) => {
     
     if (show.choices) {
         clearConvo();
-        store.updateChoices(show.choices);
-        store.setChoosing();
+        chs.updateChoices(show.choices);
+        chs.setChoosing();
     }
   
     if (show.transition) {
@@ -71,5 +72,5 @@ const clearConvo = () => {
     store.clearSay();
     store.clearMono();
     store.clearTransition();
-    store.clearChoices();
+    chs.clearChoices();
 }

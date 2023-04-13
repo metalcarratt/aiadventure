@@ -9,7 +9,7 @@ const storyReference: Ref<Story> = ref([]);
 
 const updateIndex = () => {
     story.incrementIndex();
-        if (story.index() >= story.size()) {
+    if (story.index() >= story.size()) {
         chapter.incrementIndex();
         story.update(storyReference.value[chapter.index()]);
         story.resetIndex();
@@ -20,7 +20,7 @@ const updateIndex = () => {
 export const story = {
     init: (newRef: Story) => {
         storyReference.value = newRef;
-        story.update(storyReference.value[0]);
+        story.update(storyReference.value[chapterIndex.value]);
     },
     isInitialised: () => storyReference.value.length,
 

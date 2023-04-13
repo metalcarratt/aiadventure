@@ -1,9 +1,9 @@
 <template>
-    <div class="gameOver" v-if="store.finished()">Game Over! Thanks for playing!</div>
+    <div class="gameOver" v-if="end.finished()">Game Over! Thanks for playing!</div>
 </template>
 
 <script setup>
-import { store } from '../engine/store';
+import { end } from '../engine/ending';
 </script>
 
 <style scoped>

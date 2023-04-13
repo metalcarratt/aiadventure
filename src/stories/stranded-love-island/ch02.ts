@@ -1,5 +1,6 @@
 import { Chapter } from "@/engine/storyi";
 import { CAMPFIRE_IMG, EMIKO_IMG, HIROKO_IMG, ISLAND_IMG, PLAYER_IMG } from "./images";
+import { Attribute } from "./attrs";
 
 export const chapter2: Chapter = [
     {
@@ -15,8 +16,11 @@ export const chapter2: Chapter = [
         pic: PLAYER_IMG,
         choices: [
             {
-                say: 'Are you sure there\'s anything here to find?',
+                say: 'I understand how you feel, Hiroko.',
                 next: {
+                    attr: {
+                        [Attribute.HIROKO_AFFINITY]: 1
+                    },
                     sequence: [
                         {
                             pic: EMIKO_IMG,
@@ -30,8 +34,11 @@ export const chapter2: Chapter = [
                 }
             },
             {
-                say: 'That\'s a good plan. Let\'s split up and search.',
+                say: 'That\'s a good plan, Emiko. Let\'s split up and search.',
                 next: {
+                    attr: {
+                        [Attribute.EMIKO_AFFINITY]: 1
+                    },
                     sequence: [
                         {
                             pic: HIROKO_IMG,
@@ -77,8 +84,11 @@ export const chapter2: Chapter = [
                 }
             },
             {
-                say: 'I don\'t think this will be enough to sustain us for long.',
+                say: 'Do you need help opening that coconut, Hiroko?',
                 next: {
+                    attr: {
+                        [Attribute.HIROKO_AFFINITY]: 1
+                    },
                     sequence: [
                         {
                             pic: HIROKO_IMG,

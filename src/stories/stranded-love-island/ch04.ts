@@ -1,5 +1,6 @@
 import { Chapter } from "@/engine/storyi";
 import { EMIKO_IMG, HIGHPOINT_IMG, HIROKO_IMG, ISLAND_IMG, PLAYER_IMG, SHELTER_IMG } from "./images";
+import { Attribute } from "./attrs";
 
 export const chapter4: Chapter = [
     {
@@ -12,6 +13,10 @@ export const chapter4: Chapter = [
             {
                 say: 'Let\'s start working on a plan to get off this island.',
                 next: {
+                    attr: {
+                        [Attribute.EMIKO_AFFINITY]: 1,
+                        [Attribute.RESCUABILITY]: 1
+                    },
                     sequence: [
                         {
                             pic: EMIKO_IMG,
@@ -27,6 +32,9 @@ export const chapter4: Chapter = [
             {
                 say: 'What\'s the point? We\'re stuck here forever.',
                 next: {
+                    attr: {
+                        [Attribute.RESCUABILITY]: -1
+                    },
                     sequence: [
                         {
                             pic: HIROKO_IMG,
@@ -47,6 +55,10 @@ export const chapter4: Chapter = [
             {
                 say: 'We need to make a signal to attract rescuers.',
                 next: {
+                    attr: {
+                        [Attribute.EMIKO_AFFINITY]: 1,
+                        [Attribute.RESCUABILITY]: 1
+                    },
                     sequence: [
                         {
                             pic: HIROKO_IMG,
@@ -62,6 +74,9 @@ export const chapter4: Chapter = [
             {
                 say: 'What if we\'re stuck here forever? How do we survive long-term?',
                 next: {
+                    attr: {
+                        [Attribute.RESCUABILITY]: -1
+                    },
                     sequence: [
                         {
                             pic: EMIKO_IMG,
@@ -95,6 +110,9 @@ export const chapter4: Chapter = [
             {
                 say: 'Keep going, guys. We can do this.',
                 next: {
+                    attr: {
+                        [Attribute.EMIKO_AFFINITY]: 1
+                    },
                     sequence: [
                         {
                             pic: EMIKO_IMG,
@@ -108,15 +126,18 @@ export const chapter4: Chapter = [
                 }
             },
             {
-                say: 'I don\'t think this is going to work.',
+                say: 'You can do it, Hiroko.',
                 next: {
+                    attr: {
+                        [Attribute.HIROKO_AFFINITY]: 1
+                    },
                     sequence: [
                         {
                             pic: HIROKO_IMG,
-                            say: 'Gee, you think?'
+                            say: 'Do you think so?'
                         },
                         {
-                            pic: HIROKO_IMG,
+                            pic: EMIKO_IMG,
                             say: 'We have to keep trying. We can\'t lose hope.'
                         }
                     ]

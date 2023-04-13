@@ -1,5 +1,6 @@
 import { Chapter } from "@/engine/storyi";
 import { EMIKO_IMG, HIROKO_IMG, ISLAND_IMG, PLAYER_IMG, SHELTER_IMG } from "./images";
+import { Attribute } from "./attrs";
 
 export const chapter3: Chapter = [
     {
@@ -12,6 +13,9 @@ export const chapter3: Chapter = [
             {
                 say: 'Do you think we\'re the only ones on this island?',
                 next: {
+                    attr: {
+                        [Attribute.RESCUABILITY]: -1
+                    },
                     sequence: [
                         {
                             pic: HIROKO_IMG,
@@ -27,6 +31,9 @@ export const chapter3: Chapter = [
             {
                 say: 'We need to keep looking. We\'ll find a way off this island eventually.',
                 next: {
+                    attr: {
+                        [Attribute.RESCUABILITY]: 1
+                    },
                     sequence: [
                         {
                             pic: EMIKO_IMG,
@@ -47,6 +54,9 @@ export const chapter3: Chapter = [
             {
                 say: 'We need to build a shelter. It\'ll be safer than sleeping on the beach.',
                 next: {
+                    attr: {
+                        [Attribute.EMIKO_AFFINITY]: 1
+                    },
                     sequence: [
                         {
                             pic: HIROKO_IMG,
@@ -62,6 +72,9 @@ export const chapter3: Chapter = [
             {
                 say: 'What if we never get off this island? What do we do then?',
                 next: {
+                    attr: {
+                        [Attribute.RESCUABILITY]: 1
+                    },
                     sequence: [
                         {
                             pic: EMIKO_IMG,
@@ -107,8 +120,11 @@ export const chapter3: Chapter = [
                 }
             },
             {
-                say: 'I\'m not sure this shelter will hold up in bad weather.',
+                say: 'Sorry, it\'s not the best shelter, I hope it will hold up in bad weather.',
                 next: {
+                    attr: {
+                        [Attribute.HIROKO_AFFINITY]: 1
+                    },
                     sequence: [
                         {
                             pic: HIROKO_IMG,

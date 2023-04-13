@@ -1,11 +1,12 @@
 import { attr } from './attributes';
 import { chs } from './choices';
 import { store } from './store';
+import { end } from './ending';
 import { story } from './story';
 import { Ending, Scene } from './storyi';
 
 export const update = () => {
-    if (!store.finished()) {
+    if (!end.finished()) {
         const index = story.index();
         if (story.scene(index)) {
             doUpdate(story.scene(index));
@@ -51,18 +52,31 @@ const showEnding = (endings: Ending[] | undefined) => {
     if (endings) {
         endingsloop:
         for (const ending of endings) {
-            for (const key of Object.keys(ending.min)) {
-                if (attr.get(key) < ending.min[key]) {
-                continue endingsloop;
+            if (ending.min) {
+                for (const key of Object.keys(ending.min)) {
+                    if (attr.get(key) < ending.min[key]) {
+                        continue endingsloop;
+                    }
                 }
             }
-            for (const key of Object.keys(ending.max)) {
-                if (attr.get(key) > ending.max[key]) {
-                continue endingsloop;
+            if (ending.max) {
+                for (const key of Object.keys(ending.max)) {
+                    if (attr.get(key) > ending.max[key]) {
+                        continue endingsloop;
+                    }
                 }
             }
-            doUpdate(ending.show);
-            store.setFinished();
+
+            // If we get here the current ending passed all requirements
+
+            if (ending.show) {
+                doUpdate(ending.show);
+                end.setFinished();
+
+            } else if (ending.sequence) {
+                end.setEnding(ending);
+                doUpdate(ending.sequence[0]);
+            }
             return;
         }
     }

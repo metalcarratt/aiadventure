@@ -54,7 +54,7 @@ export const chapter6: Scene[] = [
                 min: {},
                 max: {},
                 show: {
-                    say: 'I respect you as a work colleague but let\'s not do anything outside work anymore.'
+                    say: 'I think we should have a purely professional relationship from now on.'
                 }
             }
         ]

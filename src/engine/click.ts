@@ -1,9 +1,15 @@
 import { story } from './story';
-import { chs, clickOutsideChoice } from './choices';
+import { clickOutsideChoice } from './choices';
+import { end, inEnding } from './ending';
 
 export const click = () => {
     if (clickOutsideChoice()) {
         return;
     }
-    story.updateIndex();
+    if (inEnding()) {
+        return;
+    }
+    if (!end.finished()) {
+        story.updateIndex();
+    }
 }

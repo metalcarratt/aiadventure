@@ -11,4 +11,5 @@ export const attr = {
     get: (key: string) => store.value[key],
     list: () => store.value,
     increment: (key: string, amount: number) => store.value[key] += amount,
+    names: () => Object.keys(store.value)
 }

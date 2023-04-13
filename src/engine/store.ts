@@ -5,7 +5,6 @@ const pic = ref('');
 const location = ref('');
 const mono = ref('');
 const transition = ref('');
-const finished = ref(false);
 
 export const store = {
 
@@ -26,8 +25,5 @@ export const store = {
 
     transition: () => transition.value,
     updateTransition: (newTransition: string) => transition.value = newTransition,
-    clearTransition: () => transition.value = '',
-
-    finished: () => finished.value,
-    setFinished: () => finished.value = true
+    clearTransition: () => transition.value = ''
 }

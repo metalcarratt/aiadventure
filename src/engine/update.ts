@@ -1,8 +1,10 @@
-import { store } from './store.js';
-import { story } from './story.js';
+import { attr } from './attributes';
+import { store } from './store';
+import { story } from './story';
+import { Ending, Scene } from './storyi';
 
 export const update = () => {
-    if (!store.finished.value) {
+    if (!store.finished()) {
         const index = story.index();
         if (story.scene(index)) {
             doUpdate(story.scene(index));
@@ -10,7 +12,7 @@ export const update = () => {
     }
 }
   
-export const doUpdate = (show) => {
+export const doUpdate = (show: Scene) => {
     if (show.say) {
         clearConvo();
         store.updateSay(show.say);
@@ -41,25 +43,25 @@ export const doUpdate = (show) => {
       store.updateTransition(show.transition)
     }
   
-    showEnding(show);
+    showEnding(show.endings);
   }
 
-const showEnding = (show) => {
-    if (show.endings) {
+const showEnding = (endings: Ending[] | undefined) => {
+    if (endings) {
         endingsloop:
-        for (const ending of show.endings) {
+        for (const ending of endings) {
             for (const key of Object.keys(ending.min)) {
-                if (store.attr(key) < ending.min[key]) {
+                if (attr.get(key) < ending.min[key]) {
                 continue endingsloop;
                 }
             }
             for (const key of Object.keys(ending.max)) {
-                if (store.attr(key) > ending.max[key]) {
+                if (attr.get(key) > ending.max[key]) {
                 continue endingsloop;
                 }
             }
-            doUpdate(store.ending.show);
-            store.finished.value = true;
+            doUpdate(ending.show);
+            store.setFinished();
             return;
         }
     }

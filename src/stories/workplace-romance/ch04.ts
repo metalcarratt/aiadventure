@@ -1,6 +1,8 @@
+import { Scene } from "@/engine/storyi";
+import { Attribute } from "./attrs";
 import { BOSS_IMG, PARK_IMG, SAKURA_IMG } from "./images";
 
-export const chapter4 = [
+export const chapter4: Scene[] = [
     {
         location: PARK_IMG,
         transition: 'Everyone arrives at the park'
@@ -16,7 +18,7 @@ export const chapter4 = [
                 say: 'Listen everyone. I\'m clearly the fastest so I will go last. Sakura, do you want to run first?',
                 next: {
                     attr: {
-                        competency: 1
+                        [Attribute.COMPETENCY]: 1
                     },
                     show: {
                         say: 'Oh, sure.'
@@ -27,7 +29,7 @@ export const chapter4 = [
                 say: 'Everyone, let\'s work together. Sakura, are you a fast runner?',
                 next: {
                     attr: {
-                        trust: 1
+                        [Attribute.TRUST]: 1
                     },
                     show: {
                         say: 'I\'m not very fast. I hope I don\'t drag everyone down.'
@@ -38,7 +40,7 @@ export const chapter4 = [
                 say: 'Sakura, did I tell you before that I work out at the gym?',
                 next: {
                     attr: {
-                        arrogant: 1
+                        [Attribute.ARROGANT]: 1
                     },
                     show: {
                         say: 'That\'s amazing. Our team will win for sure.'
@@ -64,7 +66,7 @@ export const chapter4 = [
                 say: 'This exercise is tricky. Let\'s go slow and take our time. We don\'t want anyone to get hurt.',
                 next: {
                     attr: {
-                        friendly: 1
+                        [Attribute.FRIENDLY]: 1
                     },
                     show: {
                         say: 'I\'ve done this before. Maybe I can teach you all what to do?'
@@ -75,7 +77,7 @@ export const chapter4 = [
                 say: 'Hmm, does anyone know how to do this?',
                 next: {
                     attr: {
-                        trust: 1
+                        [Attribute.TRUST]: 1
                     },
                     show: {
                         say: 'I\'ve done it before. Shall I teach you all what to do?'
@@ -95,7 +97,7 @@ export const chapter4 = [
                 say: 'Who drew this map? It looks like something a five year old would make. Haha!',
                 next: {
                     attr: {
-                        friendly: -1
+                        [Attribute.FRIENDLY]: -1
                     },
                     show: {
                         say: 'Oh, sorry, the boss asked me to make it at the last minute.'
@@ -106,7 +108,7 @@ export const chapter4 = [
                 say: 'What\'s this first picture. Sakura, any ideas?',
                 next: {
                     attr: {
-                        trust: 1
+                        [Attribute.TRUST]: 1
                     },
                     show: {
                         say: 'It looks like a wombat? Oh, look over there in that tree!'

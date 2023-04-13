@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { store } from '../engine/store.js';
+import { store } from '../engine/store';
 </script>
 
 <style scoped>

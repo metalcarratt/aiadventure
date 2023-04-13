@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { click } from '../engine/click.js';
+import { click } from '../engine/click';
 import SceneBackground from './SceneBackground.vue';
 import SceneCharacter from './SceneCharacter.vue';
 import NpcDialogue from './NpcDialogue.vue';

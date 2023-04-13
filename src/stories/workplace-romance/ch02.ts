@@ -1,6 +1,8 @@
+import { Scene } from "@/engine/storyi";
+import { Attribute } from "./attrs";
 import { BOSS_IMG, SAKURA_IMG, OFFICE_IMG } from "./images";
 
-export const chapter2 = [
+export const chapter2: Scene[] = [
     {
         location: OFFICE_IMG,
         pic: SAKURA_IMG,
@@ -23,7 +25,7 @@ export const chapter2 = [
                 say: 'Yes, I\'ve already given it some thought. Look at this...',
                 next: {
                     attr: {
-                        arrogant: 1
+                        [Attribute.ARROGANT]: 1
                     },
                     show: {
                         say: 'Oh, that\'s a really good idea.'
@@ -34,7 +36,7 @@ export const chapter2 = [
                 say: 'That\'s right. Do you have any ideas?',
                 next: {
                     attr: {
-                        trust: 1
+                        [Attribute.TRUST]: 1
                     },
                     show: {
                         say: 'I don\'t know if it\'s good idea, but I was thinking of this...'
@@ -56,7 +58,7 @@ export const chapter2 = [
                 say: 'You\'re right. Sakura, can you help me to put the details in a powerpoint?',
                 next: {
                     attr: {
-                        trust: 1
+                        [Attribute.TRUST]: 1
                     },
                     show: {
                         say: 'Sure, you can rely on me!'
@@ -67,7 +69,7 @@ export const chapter2 = [
                 say: 'Don\'t worry, our boss likes us to take our time, as long as we do a good job. Let me handle it.',
                 next: {
                     attr: {
-                        competency: 1
+                        [Attribute.COMPETENCY]: 1
                     },
                     show: {
                         say: 'Okay, sure.'
@@ -78,7 +80,7 @@ export const chapter2 = [
                 say: 'Relax, the boss is never dead serious about dead lines. Get it? Haha.',
                 next: {
                     attr: {
-                        competency: -1
+                        [Attribute.COMPETENCY]: -1
                     },
                     show: {
                         say: "Oh. Haha."
@@ -108,7 +110,7 @@ export const chapter2 = [
                 say: 'Sorry, boss, it was Yuki\'s fault. He kept coming over to distract us.',
                 next: {
                     attr: {
-                        arrogant: 0
+                        [Attribute.ARROGANT]: 0
                     },
                     show: {
                         pic: SAKURA_IMG,
@@ -120,7 +122,7 @@ export const chapter2 = [
                 say: 'Sorry, boss, it\'s my fault. I\'ll make it up after lunch.',
                 next: {
                     attr: {
-                        competency: -1
+                        [Attribute.COMPETENCY]: -1
                     }
                 }
             },
@@ -128,7 +130,7 @@ export const chapter2 = [
                 say: 'Sorry, boss, but I had to train the newbie so I didn\'t have enough time.',
                 next: {
                     attr: {
-                        trust: -1
+                        [Attribute.TRUST]: -1
                     }
                 }
             }

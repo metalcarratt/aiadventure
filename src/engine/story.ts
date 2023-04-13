@@ -1,25 +1,31 @@
-import { ref } from "vue";
-import { myStory } from '../stories/workplace-romance/index.js';
-import { update } from './update.js';
+import { Ref, ref } from "vue";
+import { Chapter, Story } from "./storyi";
+import { update } from './update';
 
 const storyIndex = ref(0);
 const chapterIndex = ref(0);
-const _story = ref(myStory[chapterIndex.value]);
+const store: Ref<Chapter> = ref([]);
+const storyReference: Ref<Story> = ref([]);
 
 const updateIndex = () => {
     story.incrementIndex();
         if (story.index() >= story.size()) {
         chapter.incrementIndex();
-        story.update(myStory[chapter.index()]);
+        story.update(storyReference.value[chapter.index()]);
         story.resetIndex();
     }
     update();
 }
 
 export const story = {
-    scene: (index) => _story.value[index],
-    size: () => _story.value.length,
-    update: (newStory) => _story.value = newStory,
+    init: (newRef: Story) => {
+        storyReference.value = newRef;
+        story.update(storyReference.value[0]);
+    },
+
+    scene: (index: number) => store.value[index],
+    size: () => store.value.length,
+    update: (newStory: Chapter) => store.value = newStory,
 
     index: () => storyIndex.value,
     incrementIndex: () => storyIndex.value++,

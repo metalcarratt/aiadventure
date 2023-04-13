@@ -1,6 +1,8 @@
+import { Scene } from "@/engine/storyi";
+import { Attribute } from "./attrs";
 import { CINEMA_IMG, SAKURA_BLUSH_IMG, SAKURA_IMG } from "./images";
 
-export const chapter6 = [
+export const chapter6: Scene[] = [
     {
         location: CINEMA_IMG,
         transition: 'The weekend arrives and as planned you go to watch a movie with Sakura'
@@ -16,12 +18,12 @@ export const chapter6 = [
         endings: [
             {
                 max: {
-                    arrogant: 4,
-                    friendly: 4,
-                    competency: 0
+                    [Attribute.ARROGANT]: 4,
+                    [Attribute.FRIENDLY]: 4,
+                    [Attribute.COMPETENCY]: 0
                 },
                 min: {
-                    trust: 6
+                    [Attribute.TRUST]: 6
                 },
                 show: {
                     pic: SAKURA_BLUSH_IMG,
@@ -30,10 +32,10 @@ export const chapter6 = [
             },
             {
                 max: {
-                    arrogant: 4
+                    [Attribute.ARROGANT]: 4
                 },
                 min: {
-                    friendly: 5
+                    [Attribute.FRIENDLY]: 5
                 },
                 show: {
                     say: 'I\'m so thankful for how much you\'ve helped me since I started working here. I hope we can stay good friends.'
@@ -41,7 +43,7 @@ export const chapter6 = [
             },
             {
                 min: {
-                    competency: 2
+                    [Attribute.COMPETENCY]: 2
                 },
                 max: {},
                 show: {

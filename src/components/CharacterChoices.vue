@@ -12,8 +12,8 @@
 </template>
 
 <script setup>
-import { store } from '../engine/store.js';
-import { clickChoice } from '../engine/click.js';
+import { store } from '../engine/store';
+import { clickChoice } from '../engine/click';
 </script>
 
 <style scoped>

@@ -1,6 +1,8 @@
+import { Scene } from "@/engine/storyi";
+import { Attribute } from "./attrs";
 import { BOSS_IMG, LUNCH_IMG, SAKURA_IMG } from "./images";
 
-export const chapter3 = [
+export const chapter3: Scene[] = [
     {
         location: LUNCH_IMG,
         transition: 'Your whole team go out for lunch'
@@ -42,7 +44,7 @@ export const chapter3 = [
                 say: 'Oh? Well, it\'s good you don\'t need glasses! Haha!',
                 next: {
                     attr: {
-                        friendly: -1
+                        [Attribute.FRIENDLY]: -1
                     },
                     show: {
                         say: 'Um..'
@@ -53,7 +55,7 @@ export const chapter3 = [
                 say: 'I like working out at the gym. Trying to get the perfect bod, yeah!',
                 next: {
                     attr: {
-                        arrogant: 1
+                        [Attribute.ARROGANT]: 1
                     },
                     show: {
                         say: 'Wow, you must be very strong!'
@@ -64,7 +66,7 @@ export const chapter3 = [
                 say: 'I like reading books too. What\'s your favourite thing to read?',
                 next: {
                     attr: {
-                        friendly: 1
+                        [Attribute.FRIENDLY]: 1
                     },
                     show: {
                         say: 'Oh, I especially like Lord of the Rings'
@@ -79,7 +81,7 @@ export const chapter3 = [
                 say: 'So, how do you feel after one morning working? Everything okay?',
                 next: {
                     attr: {
-                        trust: 1
+                        [Attribute.TRUST]: 1
                     },
                     show: {
                         say: 'It\'s a lot of work but there are many things to learn.'
@@ -90,7 +92,7 @@ export const chapter3 = [
                 say: 'Have you seen Harry Potter?',
                 next: {
                     attr: {
-                        friendly: 1
+                        [Attribute.FRIENDLY]: 1
                     },
                     show: {
                         say: 'Yes, I love that show.'
@@ -101,7 +103,7 @@ export const chapter3 = [
                 say: 'Did you see the boss\' patch pocket? Doesn\'t it look weird?',
                 next: {
                     attr: {
-                        trust: -1
+                        [Attribute.TRUST]: -1
                     },
                     show: {
                         say: 'Oh, I didn\'t notice. I\'ll take a closer look next time.'

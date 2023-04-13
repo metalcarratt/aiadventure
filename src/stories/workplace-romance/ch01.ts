@@ -1,6 +1,8 @@
+import { Scene } from "@/engine/storyi";
+import { Attribute } from "./attrs";
 import { BOSS_IMG, SAKURA_IMG, OFFICE_IMG } from "./images";
 
-export const chapter1 = [
+export const chapter1: Scene[] = [
     {
       location: OFFICE_IMG,
       pic: BOSS_IMG,
@@ -36,7 +38,7 @@ export const chapter1 = [
           say: 'Sir, are you sure it\'s okay to involve a newbie on this?',
           next: {
             attr: {
-              arrogant: 1
+              [Attribute.ARROGANT]: 1
             },
             show: {
               pic: SAKURA_IMG,
@@ -60,7 +62,7 @@ export const chapter1 = [
           say: 'Nice to meet you. Don\'t worry, I\'ll show you how everything is done.',
           next: {
             attr: {
-              arrogant: 1
+              [Attribute.ARROGANT]: 1
             }
           }
         },
@@ -68,7 +70,7 @@ export const chapter1 = [
           say: 'Nice to meet you. I look forward to working together.',
           next: {
             attr: {
-              friendly: 1
+              [Attribute.FRIENDLY]: 1
             }
           }
         }

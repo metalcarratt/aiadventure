@@ -1,6 +1,8 @@
+import { Scene } from "@/engine/storyi";
+import { Attribute } from "./attrs";
 import { BAR_IMG, BOSS_IMG, OFFICE_IMG, SAKURA_IMG } from "./images";
 
-export const chapter5 = [
+export const chapter5: Scene[] = [
     {
         location: OFFICE_IMG,
         transition: 'Back at the office'
@@ -23,7 +25,7 @@ export const chapter5 = [
                 say: 'Aren\'t you glad we finished the product launch ideas on time?',
                 next: {
                     attr: {
-                        arrogant: 1
+                        [Attribute.ARROGANT]: 1
                     },
                     show: {
                         say: 'Yes! Your idea was definately the best!'
@@ -35,7 +37,7 @@ export const chapter5 = [
                 say: 'You said before you like yoga. What made you get into that?',
                 next: {
                     attr: {
-                        friendly: 1
+                        [Attribute.FRIENDLY]: 1
                     },
                     show: {
                         say: 'It helps me keep fit. I live in a small apartment so I need some exercise that I can do in a small place.'
@@ -54,7 +56,7 @@ export const chapter5 = [
                 say: 'Did you see the typo in the announcements email? I thought Yuki was winking at me but he was just trying to close the brackets.',
                 next: {
                     attr: {
-                        friendly: 1
+                        [Attribute.FRIENDLY]: 1
                     },
                     show: {
                         say: 'I thought the same thing. It was so funny.'
@@ -65,7 +67,7 @@ export const chapter5 = [
                 say: 'Did you see Yuki during the relay race? He looked like a crab, the way he was running.',
                 next: {
                     attr: {
-                        arrogant: 1
+                        [Attribute.ARROGANT]: 1
                     },
                     show: {
                         say: 'Oh? I wasn\'t really paying attention.'
@@ -81,7 +83,7 @@ export const chapter5 = [
         choices: [
             {
                 say: 'Wait...',
-                next: () => {}
+                next: {}
             }
         ]
     },
@@ -115,7 +117,7 @@ export const chapter5 = [
                 say: 'How about The Hobbit?',
                 next: {
                     attr: {
-                        trust: 1
+                        [Attribute.TRUST]: 1
                     },
                     show: {
                         say: 'Oh, I wanted to watch that. Okay!'
@@ -126,7 +128,7 @@ export const chapter5 = [
                 say: 'How about Avengers?',
                 next: {
                     attr: {
-                        friendly: 1
+                        [Attribute.FRIENDLY]: 1
                     },
                     show: {
                         say: 'I haven\'t seen that before. I suppose I can try.'
@@ -137,7 +139,7 @@ export const chapter5 = [
                 say: 'How about Pride and Prejudice?',
                 next: {
                     attr: {
-                        competency: -1
+                        [Attribute.COMPETENCY]: -1
                     },
                     show: {
                         say: 'A romance movie? Um, okay, we can try that.'

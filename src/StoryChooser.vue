@@ -1,10 +1,10 @@
 <template>
     <div class="chooser">
         <img :src="cover"/>
-        <h1>Choose a story:</h1>
+        <h1>AI Adventures</h1>
         <div class="stories">
-            <span @click="chooseWorkplaceRomance">Workplace Romance</span>
-            <span @click="chooseStrandedLoveIsland">Stranded Love Island</span>
+            <img @click="chooseWorkplaceRomance" :src="workplaceRomanceImg" class="book" />
+            <img @click="chooseStrandedLoveIsland" :src="strandedLoveIslandImg" class="book" />
         </div>
     </div>
 </template>
@@ -23,6 +23,8 @@ const chooseStrandedLoveIsland = () => {
 }
 
 const cover = './cover.jpg';
+const workplaceRomanceImg = './workplace/cover.jpg';
+const strandedLoveIslandImg = './island/cover.jpg';
 </script>
 
 <style scoped>
@@ -48,11 +50,14 @@ const cover = './cover.jpg';
 
 .stories {
     position: absolute;
-    bottom: 40px;
+    top: 100px;
     width: 100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.stories span {
+
+/*.stories span {
     font-family: "Comic Sans MS";
     border: 1px solid black;
     padding: 20px;
@@ -63,6 +68,19 @@ const cover = './cover.jpg';
 
 .stories span:hover {
     background-color: #256d83;
+    cursor: pointer;
+} */
+
+img.book {
+    width: 125px;
+    height: 162px;
+    border: 1px solid #69acf4;
+    box-shadow: 1px 1px 8px;
+}
+
+img.book:hover {
+    width: 140px;
+    height: 181px;
     cursor: pointer;
 }
 </style>

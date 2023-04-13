@@ -1,7 +1,7 @@
-import { Scene } from "@/engine/storyi";
+import { Chapter } from "@/engine/storyi";
 import { BEACH_IMG, EMIKO_IMG, HIROKO_IMG, PLAYER_IMG } from "./images";
 
-export const chapter1: Scene[] = [
+export const chapter1: Chapter = [
     {
         location: BEACH_IMG,
         transition: 'You wake up on the sandy beach of a deserted island. Your head is pounding, and your clothes are wet and torn.'
@@ -27,11 +27,11 @@ export const chapter1: Scene[] = [
                     sequence: [
                         {
                             pic: HIROKO_IMG,
-                            say: 'We\'re all stranded here. Our ship got wrecked in a storm, and we ended up on this stupid island.'
+                            say: 'I\'m Hiroko. We\'re all stranded here. Our ship got wrecked in a storm, and we ended up on this stupid island.'
                         },
                         {
                             pic: EMIKO_IMG,
-                            say: 'We\'re lucky to be alive, though. It could\'ve been worse.'
+                            say: 'We\'re lucky to be alive, though. It could\'ve been worse. By the way, I\'m Emiko.'
                         }
                     ]
                 }
@@ -42,11 +42,11 @@ export const chapter1: Scene[] = [
                     sequence: [
                         {
                             pic: EMIKO_IMG,
-                            say: 'You\'re welcome. We\'re all stranded here. Our ship got wrecked in a storm, and we ended up on this island.'
+                            say: 'You\'re welcome. I\'m Emiko. We\'re all stranded here. Our ship got wrecked in a storm, and we ended up on this island.'
                         },
                         {
                             pic: HIROKO_IMG,
-                            say: 'Lucky us.'
+                            say: 'Lucky us. I\'m Hiroko'
                         }
                     ]
                 }
@@ -122,6 +122,9 @@ export const chapter1: Scene[] = [
                 }
             }
         ]
+    },
+    {
+        transition: 'Emiko, Hiroko and you start to walk through the island'
     }
 ]
 

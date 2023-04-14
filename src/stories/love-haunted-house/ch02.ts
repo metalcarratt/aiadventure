@@ -1,6 +1,6 @@
 import { Chapter } from "@/engine/storyi";
 import { FOYER_IMG, GHOST_IMG, ROOM1_IMG } from "./images";
-import { Hana, Takumi } from "./characters";
+import { FacelessGhost, GhostGirl, Hana, Takumi } from "./characters";
 
 export const chapter2: Chapter = [
     {
@@ -23,7 +23,7 @@ export const chapter2: Chapter = [
         say: 'But what if there\'s something dangerous up there?'
     },
     {
-        pic: 'none',
+        who: FacelessGhost,
         say: 'Jiiii~~~jiii~~'
     },
     {
@@ -94,11 +94,11 @@ export const chapter2: Chapter = [
                             say: "I don't know about this, Takumi. It's giving me the creeps."
                         },
                         {
-                            pic: GHOST_IMG,
+                            who: GhostGirl,
                             say: "Ahhhhhhh~~~~~!"
                         },
                         {
-                            transition: "You both run out of the room, scared out of their minds."
+                            transition: "You both run out of the room, scared out of your minds."
                         }
                     ]
                 }

@@ -1,5 +1,5 @@
 import { Character } from "@/engine/storyi";
-import { HANA_IMG, TAKUMI_IMG } from "./images";
+import { GHOST_IMG, HANA_IMG, TAKUMI_IMG } from "./images";
 
 export const Hana: Character = {
     name: 'Hana',
@@ -13,4 +13,18 @@ export const Takumi: Character = {
     pic: TAKUMI_IMG,
     colour: '#d7d6d6',
     bgColour: '#323232'
+}
+
+export const FacelessGhost: Character = {
+    name: '???',
+    pic: 'none',
+    colour: 'white',
+    bgColour: 'black'
+}
+
+export const GhostGirl: Character = {
+    name: '???',
+    pic: GHOST_IMG,
+    colour: 'white',
+    bgColour: 'black'
 }

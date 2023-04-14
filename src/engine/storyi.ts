@@ -23,8 +23,16 @@ export interface Scene extends CutScene {
 export interface CutScene {
     location?: string,
     pic?: string,
+    who?: Character,
     say?: string,
     transition?: string
+}
+
+export type Character = {
+    name: string,
+    pic: string,
+    colour: string,
+    bgColour: string
 }
 
 export type Chapter = Scene[];

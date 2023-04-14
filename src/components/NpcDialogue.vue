@@ -1,9 +1,11 @@
 <template>
-    <div class="dialogue" v-if="store.say()">{{ store.say() }}</div>
+    <div class="dialogue" :style="style()" v-if="store.say()">{{ store.say() }}</div>
 </template>
 
 <script setup>
 import { store } from '../engine/store';
+
+const style = () => store.colour() ? `color: ${store.colour()}; background-color: ${store.bgColour()}; border: 1px double ${store.colour()}` : '';
 </script>
 
 <style scoped>

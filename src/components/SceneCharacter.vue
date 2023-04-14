@@ -1,9 +1,11 @@
 <template>
-    <img class="character" :src="store.pic()">
+    <img class="character" :src="store.pic()" v-if="showPic()">
 </template>
 
 <script setup>
 import { store } from '../engine/store';
+
+const showPic = () => store.pic() !== 'none';
 </script>
 
 <style scoped>

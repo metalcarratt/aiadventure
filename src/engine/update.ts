@@ -22,6 +22,12 @@ export const doUpdate = (show: Scene) => {
   
     if (show.pic) {
         store.updatePic(show.pic);
+        store.clearDialogColour();
+    }
+
+    if (show.who) {
+        store.updatePic(show.who.pic);
+        store.updateColour(show.who.colour, show.who.bgColour);
     }
   
     if (show.location) {

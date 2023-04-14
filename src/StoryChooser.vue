@@ -5,6 +5,7 @@
         <div class="stories">
             <img @click="chooseWorkplaceRomance" :src="workplaceRomanceImg" class="book" />
             <img @click="chooseStrandedLoveIsland" :src="strandedLoveIslandImg" class="book" />
+            <img @click="chooseLoveHauntedHouse" :src="loveHauntedHouseImg" class="book" />
         </div>
         <a :href="aboutLocation">About</a>
     </div>
@@ -14,6 +15,7 @@
 import { init } from './engine/init';
 import { myStory, initAttributes } from './stories/workplace-romance/index';
 import { loveIsland, loveIslandAttributes } from './stories/stranded-love-island/index';
+import { hauntedHouse, hauntedHouseAttributes} from './stories/love-haunted-house/index';
 
 const chooseWorkplaceRomance = () => {
     init(myStory, initAttributes);
@@ -23,9 +25,14 @@ const chooseStrandedLoveIsland = () => {
     init(loveIsland, loveIslandAttributes);
 }
 
+const chooseLoveHauntedHouse = () => {
+    init(hauntedHouse, hauntedHouseAttributes);
+}
+
 const cover = './cover.jpg';
 const workplaceRomanceImg = './workplace/cover.jpg';
 const strandedLoveIslandImg = './island/cover.jpg';
+const loveHauntedHouseImg = './haunted/cover.jpg';
 const aboutLocation = './about/index.html';
 </script>
 
@@ -61,6 +68,7 @@ const aboutLocation = './about/index.html';
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 15px;
 }
 
 img.book {

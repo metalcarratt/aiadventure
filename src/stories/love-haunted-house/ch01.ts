@@ -16,15 +16,15 @@ export const chapter1: Chapter = [
     },
     {
         who: Hana,
-        say: 'I know, Takumi, but we can\'t back down now. We\'ll never hear the end of it if we do.'
+        say: 'I know, Takumi, but we can\'t back down now. We\'ll never hear the end of it if we do. And besides, it\'s not like we believe in ghosts anyway, right?'
     },
     {
         who: Takumi,
-        say: 'Yeah, you\'re right. And besides, it\'s not like we believe in ghosts anyway, right?'
+        say: 'I don\'t know. I\'ve heard some pretty creepy stories about this place.'
     },
     {
         who: Hana,
-        say: 'I don\'t know. I\'ve heard some pretty creepy stories about this place.'
+        say: 'Yeah, you\'re right.'
     },
     {
         who: Takumi,

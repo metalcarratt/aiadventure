@@ -27,26 +27,27 @@ export const chapter2: Chapter = [
         say: 'Jiiii~~~jiii~~'
     },
     {
-        who: Takumi,
-        say: 'Do you hear that, Hana? It sounds like someone is upstairs. Should we check it out?'
-    },
-    {
         who: Hana,
-        say: 'I don\'t know, Takumi. Maybe we should stick together and explore the ground floor first.'
+        say: 'Do you hear that, Takumi? It sounds like someone is upstairs. Should we check it out?'
     },
     {
+        who: Takumi,
+        say: 'I don\'t know, Hana. Maybe we should stick together and explore the ground floor first.'
+    },
+    {
+        who: Takumi,
         choices: [
             {
                 say: 'Check out the noise upstairs',
                 next: {
                     sequence: [
                         {
-                            who: Takumi,
+                            who: Hana,
                             say: "Let's go check it out. Maybe someone needs our help."
                         },
                         {
-                            who: Hana,
-                            say: "I'm not sure this is a good idea, Takumi. But I'll follow you."
+                            who: Takumi,
+                            say: "I'm not sure this is a good idea, Hana. But I'll follow you."
                         }
                     ]
                 }
@@ -56,15 +57,15 @@ export const chapter2: Chapter = [
                 next: {
                     sequence: [
                         {
-                            who: Hana,
+                            who: Takumi,
                             say: "I have a bad feeling. Let's explore the ground floor first."
                         },
                         {
-                            who: Takumi,
-                            say: 'I don\'t know, Hana. I have a feeling we should check out what\'s upstairs first. It might be important.'
+                            who: Hana,
+                            say: 'I don\'t know, Takumi. I have a feeling we should check out what\'s upstairs first. It might be important.'
                         },
                         {
-                            who: Hana,
+                            who: Takumi,
                             say: "I guess you're right. Let's be careful though, okay?"
                         }
                     ]
@@ -80,17 +81,18 @@ export const chapter2: Chapter = [
         transition: 'As you push the door open you see a large, empty room with a rocking chair in the corner. The chair is moving back and forth on its own, and you hear the sound of a child giggling.'
     },
     {
+        who: Takumi,
         choices: [
             {
                 say: "Investigate the rocking chair",
                 next: {
                     sequence: [
                         {
-                            who: Takumi,
+                            who: Hana,
                             say: "Let's check out the rocking chair. Maybe there's a reason why it's moving on its own."
                         },
                         {
-                            who: Hana,
+                            who: Takumi,
                             say: "I don't know about this, Takumi. It's giving me the creeps."
                         },
                         {

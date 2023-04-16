@@ -11,48 +11,49 @@ export const chapter3: Chapter = [
         transition: "In the distance, you can hear faint whispers and footsteps, but you can't tell where it's coming from."
     },
     {
-        who: Hana,
-        say: "Takumi, did you hear that?"
+        who: Takumi,
+        say: "Hana, did you hear that?"
     },
     {
-        who: Takumi,
+        who: Hana,
         say: "Hear what?"
     },
     {
-        who: Hana,
+        who: Takumi,
         say: "That banging noise. It's coming from where we just were."
     },
     {
-        who: Takumi,
+        who: Hana,
         say: "Let's go check it out."
     },
     {
-        who: Hana,
+        who: Takumi,
         say: "Are you sure? I have a bad feeling about this."
     },
     {
+        who: Takumi,
         choices: [
             {
                 say: "Investigate the banging noise",
                 next: {
                     sequence: [
                         {
-                            who: Takumi,
+                            who: Hana,
                             say: "We have to see what's going on."
                         },
                         {
-                            who: Hana,
+                            who: Takumi,
                             say: "Fine, but I'm sticking close to you."
                         },
                         {
                             transition: "As you approach the door, you see that it's been slammed shut, trapping you in the hallway."
                         },
                         {
-                            who: Takumi,
+                            who: Hana,
                             say: "What the...? How did that happen?"
                         },
                         {
-                            who: Hana,
+                            who: Takumi,
                             say: "I don't know, but we need to get out of here."
                         }
                     ]
@@ -63,15 +64,15 @@ export const chapter3: Chapter = [
                 next: {
                     sequence: [
                         {
-                            who: Hana,
+                            who: Takumi,
                             say: "I've had enough. Let's get out of here."
                         },
                         {
-                            who: Takumi,
+                            who: Hana,
                             say: "Agreed. I don't want to stick around any longer."
                         },
                         {
-                            transition: "As you turn to leave, you hear a loud banging noise coming from behind them. You turn around to see that the door you just came through has been slammed shut, trapping you in the hallway."
+                            transition: "As you turn to leave, you hear a loud banging noise coming from behind you. You turn around to see that the door you just came through has been slammed shut, trapping you in the hallway."
                         },
                         {
                             who: Takumi,
@@ -94,11 +95,11 @@ export const chapter3: Chapter = [
         say: "Don't leave so soon, I'm just getting started."
     },
     {
-        who: Takumi,
+        who: Hana,
         say: "What was that? Who's there?"
     },
     {
-        who: Hana,
+        who: Takumi,
         say: "We need to find another way out of here, now!"
     },
     {

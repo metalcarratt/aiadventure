@@ -16,12 +16,6 @@ export const chapter1: Scene[] = [
         say: 'Hello everyone, my name is Sakura. Please take care of me.'
     },
     {
-      mono: 'Wow, she\'s so beautiful...'
-    },
-    {
-      mono: 'I hope I can have a chance to work with her.'
-    },
-    {
       pic: BOSS_IMG,
       say: 'Taro, I\'d like you to take care of introducing Sakura to the team.'
     },

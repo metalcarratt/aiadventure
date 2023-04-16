@@ -69,6 +69,7 @@ const aboutLocation = './about/index.html';
     justify-content: space-around;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 img.book {
